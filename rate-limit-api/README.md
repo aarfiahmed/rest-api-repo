@@ -20,3 +20,13 @@ Token Refill Rate: Tokens are added to the bucket at a rate of 1 token every 12 
 Request Handling: Each incoming API request consumes one token from the bucket.
 If a user makes a request and tokens are available, the request is processed, and one token is removed.
 If no tokens are available, the request is either delayed or denied until tokens become available.
+
+
+# Terminology
+Before we look at how to use Bucket4j, we’ll briefly discuss some of the core classes, and how they represent the different elements in the formal model of the token-bucket algorithm.
+
+The Bucket interface represents the token bucket with a maximum capacity. It provides methods such as tryConsume and tryConsumeAndReturnRemaining for consuming tokens. These methods return the result of consumption as true if the request conforms with the limits, and the token was consumed.
+
+The Bandwidth class is the key building block of a bucket, as it defines the limits of the bucket. We use Bandwidth to configure the capacity of the bucket and the rate of refill.
+
+The Refill class is used to define the fixed rate at which tokens are added to the bucket. We can configure the rate as the number of tokens that would be added in a given time period. For example, 10 buckets per second or 200 tokens per 5 minutes, and so on.
