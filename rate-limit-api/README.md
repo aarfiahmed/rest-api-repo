@@ -1,6 +1,9 @@
-# rest-api-repo
+# rate-limit-api
 
-How the Token Bucket Algorithm Works
+# Dependency
+* bucket4j-core
+
+# How the Token Bucket Algorithm Works
 1. Basic Concepts
    Bucket: Imagine a bucket that can hold a fixed number of tokens.
    Tokens: Each token represents permission to send a certain amount of data or process a request. For example, one token might allow one HTTP request or one packet of data to be sent.

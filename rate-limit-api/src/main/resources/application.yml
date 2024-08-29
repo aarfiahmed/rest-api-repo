@@ -1,0 +1,6 @@
+api:
+  url: "https://reqres.in/api/users"
+
+bucket:
+  capacity: "2"
+  refill-interval: "1" # in minutes
