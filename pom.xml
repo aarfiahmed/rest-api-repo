@@ -22,6 +22,8 @@
     <module>rate-limit-api</module>
     <module>response-compression-api</module>
       <module>http2-api</module>
+      <module>pagination-h2-api</module>
+      <module>hateos-api</module>
   </modules>
     <dependencies>
         <dependency>
